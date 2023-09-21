@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="evo-calendar.min.css">
+    <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Mooli&family=Poppins:ital,wght@1,200;1,300;1,500&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="hero">
+
+        <div id="calendar"></div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="evo-calendar.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#calendar').evoCalendar({
+
+        theme: "Midnight Blue",
+        calendarEvents: [
+      {
+        id: 'event1', // Event's ID (required)
+        name: "New Year", // Event name (required)
+        date: "January/1/2023", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true, // Same event every year (optional)
+        description: "May the coming year be filled with joy, success, and new adventures. Here's to fresh starts and cherished moments. Happy New Year! 🌟🎊✨"
+      },
+      {
+        id: "event2",
+        name: "Happy Birthday",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["March/25/2024"], // Date range
+        description: "Stars in the night, our dreams take flight.🎂 On this day, your birth, we celebrate with glee,🎉 With laughter, joy, and moments to be free.🥳 Another year begins, a journey anew,🎈 With dreams to chase and wishes that come true.🎁 May your path be lined with happiness and light,🌟 Each day a gift, shining ever so bright.💖 So blow out the candles, make a special start,🎂 Happy Birthday to you, you hold a special part!", // Event description (optional)
+        type: "event",
+        color: "#63d867", // Event custom color (optional)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        id: "event3",
+        name: "Happy Aniversary",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["August/8/2023"], // Date range
+        description: "May your love story be a never-ending journey filled with laughter, shared dreams, and cherished moments. Wishing you a lifetime of happiness, love, and countless adventures together. Congratulations on this beautiful union!You can personalize it further with the names of the couple or any specific details you'd like to include.", // Event description (optional)
+        type: "event",
+        color: "#63d867", // Event custom color (optional)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        id: "event4",
+        name: "Independance Day",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["August/14/2023"], // Date range
+        description: "Today, we celebrate the spirit of freedom and the courage of those who fought for our nation's liberty. Let's cherish the values that make our country great and continue working towards a brighter and more inclusive future for all. 🇺🇸🎉🗽 #IndependenceDay #ProudToBeAPakistani", // Event description (optional)
+        type: "event",
+        color: "#63d867", // Event custom color (optional)
+        everyYear: true // Same event every year (optional)
+      }
+    ]
+
+    })
+})
+    </script>
+
+</body>
+</html>
